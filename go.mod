@@ -1,4 +1,4 @@
-module github.com/gobins/observability/appb
+module github.com/gobins/observability
 
 go 1.18
 

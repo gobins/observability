@@ -36,13 +36,13 @@ func main() {
 			EnableOpenMetrics: true,
 		},
 	))
+	klog.Infof("starting metrics server")
 	log.Fatal(http.ListenAndServe(*addr, nil))
 }
 
 func callService(histogram prometheus.Histogram) {
-
 	val := rand.Float64()
-	klog.Infof("observed sent for: %v", val)
+	klog.Infof("observe value sent for: %v", val)
 	histogram.Observe(val)
 
 }
